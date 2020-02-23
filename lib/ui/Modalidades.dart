@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'ModalidadesFundamental.dart';
 
 class Modalidades extends StatefulWidget {
   @override
@@ -31,6 +32,14 @@ class _ModalidadesState extends State<Modalidades> {
               'Exposição Técnico-Científica (Ensino Fundamental)',
             ),
             trailing: Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              Navigator.push(
+                context,
+                CupertinoPageRoute(
+                  builder: (context) => ModalidadesFundamental(),
+                ),
+              );
+            },
           ),
           ListTile(
             title: Text(

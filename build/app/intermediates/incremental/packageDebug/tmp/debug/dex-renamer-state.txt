@@ -1,4 +1,4 @@
-#Sun Feb 16 16:03:26 BRT 2020
-base.0=/home/lucas/Documentos/mostrarob/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Sun Feb 23 00:08:49 BRT 2020
+base.0=/home/lucas/Documentos/App-Mostrarob/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

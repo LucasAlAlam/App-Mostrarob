@@ -13,59 +13,66 @@ class _CadastroState extends State<Cadastro> {
       appBar: AppBar(
         title: Text('Cadastre-se'),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Container(height: 100),
-            Image.asset('assets/mostrarob.png'),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Column(
-                children: <Widget>[
-                  TextFormField(
-                    keyboardType: TextInputType.text,
-                    decoration: InputDecoration(
-                      labelText: 'Nome completo',
-                    ),
-                  ),
-                  SizedBox(
-                    height: 16,
-                  ),
-                  TextFormField(
-                    keyboardType: TextInputType.number,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      labelText: 'Senha',
-                    ),
-                  ),
-                  SizedBox(
-                    height: 16,
-                  ),
-                  TextFormField(
-                    keyboardType: TextInputType.number,
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      labelText: 'Confirmar Senha',
-                    ),
-                  ),
-                  RaisedButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      "Cadastrar",
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                    color: Colors.orangeAccent[700],
-                  ),
-                ],
+      body: ListView(
+        children: <Widget>[
+          ListTile(
+            title: TextFormField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: 'CPF',
               ),
             ),
-          ],
-        ),
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          ListTile(
+            title: TextFormField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: 'RG',
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          ListTile(
+            title: TextFormField(
+              keyboardType: TextInputType.number,
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: 'Senha',
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          ListTile(
+            title: TextFormField(
+              keyboardType: TextInputType.number,
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: 'Confirmar Senha',
+              ),
+            ),
+          ),
+          ListTile(
+            title: RaisedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text(
+                "Cadastrar",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              color: Colors.orangeAccent[700],
+            ),
+          )
+        ],
       ),
     );
   }

@@ -13,24 +13,77 @@ class _RecuperacaoSenhaState extends State<RecuperacaoSenha> {
       appBar: AppBar(
         title: Text('Recuperação de senha'),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Container(height: 100),
-            Image.asset('assets/mostrarob.png'),
-            Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Text(
-                'Se Fudeu',
-                style: TextStyle(
-                  color: Colors.orangeAccent[700],
-                  fontSize: 50.0,
-                ),
+      body: ListView(
+        children: <Widget>[
+          ListTile(
+            title: TextFormField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: 'CPF',
               ),
             ),
-          ],
-        ),
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          ListTile(
+            title: TextFormField(
+              keyboardType: TextInputType.number,
+              decoration: InputDecoration(
+                labelText: 'RG',
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          ListTile(
+            title: Text(
+                'Art. 307 do Código Penal - Atribuir-se ou atribuir a terceiro falsa identidade para obter vantagem, em proveito próprio ou alheio, ou para causar dano a outrem. Pena: detenção, de três meses a um ano, ou multa.'),
+          ),
+          ListTile(
+            title: RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  CupertinoPageRoute(
+                    builder: (context) => Senha(),
+                  ),
+                );
+              },
+              child: Text(
+                "Enviar",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              color: Colors.orangeAccent[700],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class Senha extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Recuperação de senha'),
+      ),
+      body: Column(
+        children: <Widget>[
+          Center(
+            child: Text(
+              'Sua senha é a que estará armazenada em um banco de dados que eu ainda não fiz.',
+            ),
+          ),
+          RaisedButton(onPressed: () {
+            Navigator.pop(context);
+          })
+        ],
       ),
     );
   }

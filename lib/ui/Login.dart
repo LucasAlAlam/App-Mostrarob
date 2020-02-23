@@ -28,7 +28,7 @@ class _LoginState extends State<Login> {
                   TextFormField(
                     keyboardType: TextInputType.text,
                     decoration: InputDecoration(
-                      labelText: 'Nome completo',
+                      labelText: 'CPF',
                     ),
                   ),
                   SizedBox(
